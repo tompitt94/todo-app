@@ -3,7 +3,7 @@
     <div class="column is-two-fifths is-centered">
       <form @submit.prevent="addTask">
         <input class="input m-2 is-rounded has-text-centered" type="text" placeholder="Whatcha gonna do?" v-model="taskName">
-        <button class="button m-2 is-info is-rounded">Add Task</button>
+        <button class="button m-2 is-info is-rounded" :disabled="this.taskName.length < 1">Add Task</button>
       </form>
     </div>
   </div>
